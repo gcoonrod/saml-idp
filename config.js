@@ -9,8 +9,8 @@ var profile = {
   lastName: 'Jackson',
   displayName: 'saml jackson',
   email: 'saml.jackson@example.com',
-  mobilePhone: '+1-415-555-5141',
-  groups: 'Simple IdP Users, West Coast Users, Cloud Users'
+  server: 'greg.xferdev.com',
+  facility: '569621f8-52ef-478a-a24d-58547cd983ee'
 }
 
 /**
@@ -41,23 +41,17 @@ var metadata = [{
   description: 'The e-mail address of the user',
   multiValue: false
 },{
-  id: "mobilePhone",
-  optional: true,
-  displayName: 'Mobile Phone',
-  description: 'The mobile phone of the user',
+  id: "server",
+  optional: false,
+  displayName: 'Server',
+  description: 'server',
   multiValue: false
-}, {
-  id: "groups",
-  optional: true,
-  displayName: 'Groups',
-  description: 'Group memberships of the user',
-  multiValue: true
-}, {
-  id: "userType",
-  optional: true,
-  displayName: 'User Type',
-  description: 'The type of user',
-  options: ['Admin', 'Editor', 'Commenter']
+},{
+  id: "facility",
+  optional: false,
+  displayName: 'Facility',
+  description: 'facility',
+  multiValue: false
 }];
 
 module.exports = {
